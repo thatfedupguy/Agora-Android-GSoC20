@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Agora Android GSoC20</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="notifications">Notifications</string>
+    <string name="elections">Elections</string>
+    <string name="total_elections">Total Elections</string>
+    <string name="_0">0</string>
+    <string name="finished_elections">Finished Elections</string>
+    <string name="pending_elections">Pending Elections</string>
+    <string name="active_elections">Active Elections</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="active">ACTIVE</string>
+    <string name="dummy_elections">Dummy Elections</string>
+    <string name="starts_at">Starts At :</string>
+    <string name="fri_jan_24_12_00_04">Fri Jan 24 12:00:04</string>
+    <string name="fri_mar_17_17_09_00">Fri Mar 17 17:09:00</string>
+    <string name="ends_at">Ends At :</string>
+    <string name="description">Description</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_ut_aliquam">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</string>
+</resources>

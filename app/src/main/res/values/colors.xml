@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#53D69F</color>
+    <color name="colorPrimaryDark">#1CC46F</color>
+    <color name="bottomNav">#F2F2F2</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="black">#000000</color>
+    <color name="home_card_background">#FFD23D</color>
+    <color name="active_elections">#FF4155</color>
+    <color name="white">#FFFFFF</color>
+</resources>
