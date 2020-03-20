@@ -20,7 +20,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_username"
-            style="@style/LoginTextInputLayoutStyle"
+            style="@style/TextInputLayoutStyle"
             android:layout_width="@dimen/size_300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_30dp"
@@ -37,7 +37,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_password"
-            style="@style/LoginTextInputLayoutStyle"
+            style="@style/TextInputLayoutStyle"
             android:layout_width="@dimen/size_300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_20dp"

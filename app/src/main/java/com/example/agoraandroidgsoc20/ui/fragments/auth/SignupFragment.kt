@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.navigation.Navigation
 
 import com.example.agoraandroidgsoc20.R
@@ -24,6 +26,8 @@ class SignupFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         rootView =  inflater.inflate(R.layout.fragment_signup, container, false)
+        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+        requireActivity().window.statusBarColor = ContextCompat.getColor(requireContext(), R.color.colorPrimary)
         rootView.btn_signup.setOnClickListener {
             Navigation.findNavController(rootView).
                 navigate(SignupFragmentDirections.actionSignupFragmentToLoginFragment())

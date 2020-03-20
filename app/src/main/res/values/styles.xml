@@ -42,9 +42,9 @@
         <item name="android:textSize">@dimen/size_14sp</item>
         <item name="android:height">@dimen/size_48dp</item>
     </style>
-    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="boxStrokeColor">#53D69F</item>
-        <item name="boxStrokeWidth">2dp</item>
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/mtrl_textinput_default_box_stroke_color</item>
+        <item name="boxStrokeWidth">@dimen/size_2dp</item>
     </style>
 
 
