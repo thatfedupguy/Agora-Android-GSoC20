@@ -26,7 +26,10 @@ class SignupFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         rootView =  inflater.inflate(R.layout.fragment_signup, container, false)
-        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+        (activity as AppCompatActivity?)!!.supportActionBar!!.also {
+            it.title = getString(R.string.signup)
+            it.show()
+        }
         requireActivity().window.statusBarColor = ContextCompat.getColor(requireContext(), R.color.colorPrimary)
         rootView.btn_signup.setOnClickListener {
             Navigation.findNavController(rootView).

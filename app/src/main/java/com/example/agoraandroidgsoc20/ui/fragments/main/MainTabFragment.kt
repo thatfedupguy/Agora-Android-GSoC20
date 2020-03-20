@@ -5,6 +5,7 @@ import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -20,37 +21,42 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainTabFragment : Fragment() {
 
+    private lateinit var rootView: View
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.main_tab_fragment, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val binding = DataBindingUtil.bind<MainTabFragmentBinding>(view)!!
+        rootView =  inflater.inflate(R.layout.main_tab_fragment, container, false)
+        val binding = DataBindingUtil.bind<MainTabFragmentBinding>(rootView)!!
         binding.bottomNavigation.setOnNavigationItemSelectedListener(
             onBottomNavigationItemSelectedListener
         )
         if (childFragmentManager.findFragmentById(R.id.container) == null) {
             replaceFragment(HomeFragment())
+            title(getString(R.string.home))
         }
+        return rootView
     }
+
     private val onBottomNavigationItemSelectedListener: BottomNavigationView.OnNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.home -> {
                     replaceFragment(HomeFragment())
+                    title(getString(R.string.agora))
                 }
                 R.id.elections -> {
                     replaceFragment(ElectionsFragment())
+                    title(getString(R.string.elections))
                 }
                 R.id.notifications -> {
                     replaceFragment(NotificationFragment())
+                    title(getString(R.string.notifications))
                 }
                 R.id.profile -> {
                     replaceFragment(ProfileFragment())
+                    title(getString(R.string.profile))
                 }
             }
             true
@@ -65,6 +71,10 @@ class MainTabFragment : Fragment() {
             transaction.commitAllowingStateLoss()
             //transaction.commit();
         }, 300)
+    }
+
+    private fun title(name: String){
+        (activity as AppCompatActivity).supportActionBar?.title = name
     }
 
 }

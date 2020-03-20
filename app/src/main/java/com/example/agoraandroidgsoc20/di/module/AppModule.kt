@@ -1,6 +1,5 @@
 package com.example.agoraandroidgsoc20.di.module
 
-import com.example.agoraandroidgsoc20.utils.AppConstants
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -14,7 +13,6 @@ internal class AppModule {
     @Provides
     fun providesRetrofitInstance(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(AppConstants.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
