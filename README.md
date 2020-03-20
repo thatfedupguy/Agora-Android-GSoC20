@@ -2,7 +2,7 @@
 
 ## Readme
 
-Project to show my coding practices and UI Designs
+Project to show my coding practices and UI Designs.
 
 _Android Application for Agora Web that uses [Agora](https://gitlab.com/aossie/Agora/): An Electronic Voting Library implemented in Scala. This application uses [Agora Web API](https://gitlab.com/aossie/Agora-Web) as backend application_
 
@@ -13,7 +13,7 @@ To run the development environment for this frontend, you need [Git](https://git
 
 ## Design
 
-[Figma Prototype](https://www.figma.com/proto/1Kha5Y7MgDUmhzmdO2U8g0/Agora-Android?node-id=225%3A125&viewport=172%2C24%2C0.43090125918388367&scaling=scale-down)
+[Figma Prototype](https://www.figma.com/proto/meXzMM589jPlRaXJgKKeBm/Agora-Android-Copy?node-id=69%3A0&viewport=1541%2C-116%2C0.3036155700683594&scaling=scale-down)
 
 Note: Open link on laptop for smooth action.
 
