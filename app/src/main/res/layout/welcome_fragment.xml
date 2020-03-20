@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        tools:context=".Activities.LoginActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/skip_buttonId"
+            style="@style/SelectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/size_18dp"
+            android:layout_marginEnd="@dimen/size_18dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackground"
+            android:padding="@dimen/size_8dp"
+            tools:ignore="UnusedAttribute">
+
+            <TextView
+                android:id="@+id/skip_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/montserrat"
+                android:paddingStart="@dimen/size_8dp"
+                android:paddingEnd="@dimen/size_8dp"
+                android:text="@string/skip"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size_14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="@dimen/size_50dp"
+                android:layout_height="@dimen/size_2dp"
+                android:layout_below="@+id/skip_text"
+                android:layout_marginTop="@dimen/size_4dp"
+                android:background="@color/black" />
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/logo_card"
+            android:layout_below="@id/skip_buttonId"
+            android:layout_width="@dimen/size_120dp"
+            android:layout_height="@dimen/size_120dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_100dp"
+            app:cardCornerRadius="@dimen/size_75dp"
+            app:cardElevation="@dimen/size_8dp">
+
+
+            <ImageView
+                android:contentDescription="@string/agora"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_agora_logo" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <RelativeLayout
+            android:id="@+id/name_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo_card"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/agora"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size_28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/app_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/app_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/size_18dp"
+                android:layout_marginTop="@dimen/size_8dp"
+                android:layout_marginEnd="@dimen/size_18dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="@string/app_description"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/size18sp" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="17dp"
+            android:orientation="vertical"
+            android:layout_below="@id/name_desc"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/size_20dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_login"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_48sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:selectableItemBackground"
+                android:text="@string/have_an_account_login" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_signup"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_48sp"
+                android:layout_marginTop="@dimen/size_8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:selectableItemBackground"
+                android:text="@string/create_an_account" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_facebook_login"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_48sp"
+                android:layout_marginTop="@dimen/size_8dp"
+                android:backgroundTint="@color/facebook_blue"
+                android:clickable="true"
+                android:drawableStart="@drawable/facebook_logo"
+                android:drawablePadding="@dimen/size_12dp"
+                android:focusable="true"
+                android:foreground="?android:selectableItemBackground"
+                android:text="@string/continue_with_facebook" />
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+</layout>

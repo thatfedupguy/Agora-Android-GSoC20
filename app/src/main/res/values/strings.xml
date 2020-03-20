@@ -18,4 +18,21 @@
     <string name="ends_at">Ends At :</string>
     <string name="description">Description</string>
     <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_ut_aliquam">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</string>
+    <string name="skip">skip</string>
+    <string name="agora">Agora</string>
+    <string name="app_description">Android Application for Agora Web that uses Agora: An Electronic Voting Library implemented in Scala. This application uses Agora Web API as backend application</string>
+    <string name="have_an_account_login">Have an Account? Login</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">Username</string>
+    <string name="login">LOGIN</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="last_name_optional">Last Name (Optional)</string>
+    <string name="first_name">First Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="signup">SIGNUP</string>
 </resources>
