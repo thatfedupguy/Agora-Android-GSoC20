@@ -6,6 +6,8 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/size_40dp"
+        android:layout_marginEnd="@dimen/size_40dp"
         tools:context=".Activities.FarmerLoginActivity">
         <ImageView
             android:id="@+id/iv_login"
@@ -21,7 +23,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_username"
             style="@style/TextInputLayoutStyle"
-            android:layout_width="@dimen/size_300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_30dp"
             android:hint="@string/username"
@@ -38,7 +40,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_email"
             style="@style/TextInputLayoutStyle"
-            android:layout_width="@dimen/size_300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_10dp"
             android:hint="@string/email"
@@ -55,7 +57,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_password"
             style="@style/TextInputLayoutStyle"
-            android:layout_width="@dimen/size_300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_10dp"
             android:hint="@string/password"
@@ -72,7 +74,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_confirm_password"
             style="@style/TextInputLayoutStyle"
-            android:layout_width="@dimen/size_300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_10dp"
             android:hint="@string/confirm_password"
@@ -89,7 +91,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_first_name"
             style="@style/TextInputLayoutStyle"
-            android:layout_width="@dimen/size_300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_10dp"
             android:hint="@string/first_name"
@@ -106,7 +108,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_last_name"
             style="@style/TextInputLayoutStyle"
-            android:layout_width="@dimen/size_300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_10dp"
             android:hint="@string/last_name_optional"

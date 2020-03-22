@@ -33,4 +33,5 @@
     <dimen name="size_10dp">10dp</dimen>
     <dimen name="size_30dp">30dp</dimen>
     <dimen name="size_52dp">52dp</dimen>
+    <dimen name="size_40dp">40dp</dimen>
 </resources>

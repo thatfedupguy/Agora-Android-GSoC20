@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.fragment_login.view.*
 /**
  * A simple [Fragment] subclass.
  */
-class LoginFragment : Fragment() {
+class LoginFragment: Fragment() {
 
     private lateinit var rootView: View
 

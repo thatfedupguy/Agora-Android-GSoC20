@@ -5,19 +5,30 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.agoraandroidgsoc20.R
 import com.example.agoraandroidgsoc20.data.model.Election
+import com.example.agoraandroidgsoc20.utils.Coroutines
+import com.example.agoraandroidgsoc20.utils.ViewModelFactory
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.elections_fragment.*
+import javax.inject.Inject
 
-class ElectionsFragment : Fragment() {
+class ElectionsFragment
+    @Inject
+    constructor(
+        private val viewModelFactory: ViewModelProvider.Factory
+    )
+    : Fragment() {
 
-    private lateinit var viewModel: ElectionsViewModel
-
+    val viewModel: ElectionsViewModel by viewModels {
+        viewModelFactory
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,11 +38,15 @@ class ElectionsFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ElectionsViewModel::class.java)
         BindUI()
     }
 
-    private fun BindUI() = initRecyclerView(viewModel.generate().toElectionItem())
+    private fun BindUI() = Coroutines.main{
+        val elections = viewModel.elections.await()
+        elections.observe(requireActivity(), Observer {
+            initRecyclerView(it.toElectionItem())
+        })
+    }
 
     private fun initRecyclerView(electionItem: List<ElectionItem>) {
         val mAdapter = GroupAdapter<ViewHolder>().apply{

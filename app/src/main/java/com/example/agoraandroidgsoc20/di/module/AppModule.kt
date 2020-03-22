@@ -1,5 +1,6 @@
 package com.example.agoraandroidgsoc20.di.module
 
+import com.example.agoraandroidgsoc20.data.model.repository.ElectionsRepository
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -16,6 +17,14 @@ internal class AppModule {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
+
+    @Singleton
+    @Provides
+    fun providesElectionsRepository(): ElectionsRepository {
+        return ElectionsRepository()
+    }
+
+
 
 }
 

@@ -7,12 +7,14 @@ import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentFactory
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.agoraandroidgsoc20.R
 import com.example.agoraandroidgsoc20.base.BaseApplication.Companion.getAppInjector
 import javax.inject.Inject
+import javax.inject.Named
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +23,10 @@ class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
+
+//    @Inject
+//    @Named("ElectionsFragmentFactory")
+//    lateinit var electionsFragmentFactory: FragmentFactory
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme)

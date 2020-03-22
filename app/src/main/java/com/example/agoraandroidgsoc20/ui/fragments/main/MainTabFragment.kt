@@ -10,16 +10,21 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import com.example.agoraandroidgsoc20.R
 import com.example.agoraandroidgsoc20.databinding.MainTabFragmentBinding
+import com.example.agoraandroidgsoc20.ui.activities.MainActivity
 import com.example.agoraandroidgsoc20.ui.fragments.elections.ElectionsFragment
 import com.example.agoraandroidgsoc20.ui.fragments.home.HomeFragment
 import com.example.agoraandroidgsoc20.ui.fragments.notifications.NotificationFragment
 import com.example.agoraandroidgsoc20.ui.fragments.profile.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import javax.inject.Inject
 
 
-class MainTabFragment : Fragment() {
+class MainTabFragment
+ : Fragment() {
 
     private lateinit var rootView: View
 
@@ -47,7 +52,7 @@ class MainTabFragment : Fragment() {
                     title(getString(R.string.agora))
                 }
                 R.id.elections -> {
-                    replaceFragment(ElectionsFragment())
+                    replaceFragment(ElectionsFragment((activity as MainActivity).viewModelFactory))
                     title(getString(R.string.elections))
                 }
                 R.id.notifications -> {
