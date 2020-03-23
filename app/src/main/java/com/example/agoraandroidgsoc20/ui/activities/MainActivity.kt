@@ -24,10 +24,6 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
-//    @Inject
-//    @Named("ElectionsFragmentFactory")
-//    lateinit var electionsFragmentFactory: FragmentFactory
-
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)

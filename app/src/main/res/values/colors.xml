@@ -11,4 +11,5 @@
     <color name="grey">#9E9E9E</color>
     <color name="facebook_blue">#3B5998</color>
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#53D69F</color>
+    <color name="grey_background">#F6F6F6</color>
 </resources>

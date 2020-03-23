@@ -35,4 +35,11 @@
     <string name="first_name">First Name</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="signup">SIGNUP</string>
+    <string name="agora_example_com">agora@example.com</string>
+    <string name="tushar_singh">Tushar Singh</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="change_password">Change Password</string>
+    <string name="manage_elections">Manage Elections</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="log_out">Log out</string>
 </resources>

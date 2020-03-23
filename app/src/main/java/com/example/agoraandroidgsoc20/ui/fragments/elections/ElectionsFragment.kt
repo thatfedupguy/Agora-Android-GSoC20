@@ -26,7 +26,7 @@ class ElectionsFragment
     )
     : Fragment() {
 
-    val viewModel: ElectionsViewModel by viewModels {
+    private val viewModel: ElectionsViewModel by viewModels {
         viewModelFactory
     }
     override fun onCreateView(

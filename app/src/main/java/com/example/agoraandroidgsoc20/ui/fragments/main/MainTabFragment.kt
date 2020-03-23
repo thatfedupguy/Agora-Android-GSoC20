@@ -23,8 +23,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import javax.inject.Inject
 
 
-class MainTabFragment
- : Fragment() {
+class MainTabFragment : Fragment() {
 
     private lateinit var rootView: View
 
@@ -38,7 +37,7 @@ class MainTabFragment
             onBottomNavigationItemSelectedListener
         )
         if (childFragmentManager.findFragmentById(R.id.container) == null) {
-            replaceFragment(HomeFragment())
+            replaceFragment(HomeFragment((activity as MainActivity).viewModelFactory))
             title(getString(R.string.home))
         }
         return rootView
@@ -48,7 +47,7 @@ class MainTabFragment
         BottomNavigationView.OnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.home -> {
-                    replaceFragment(HomeFragment())
+                    replaceFragment(HomeFragment((activity as MainActivity).viewModelFactory))
                     title(getString(R.string.agora))
                 }
                 R.id.elections -> {
@@ -56,11 +55,11 @@ class MainTabFragment
                     title(getString(R.string.elections))
                 }
                 R.id.notifications -> {
-                    replaceFragment(NotificationFragment())
+                    replaceFragment(NotificationFragment((activity as MainActivity).viewModelFactory))
                     title(getString(R.string.notifications))
                 }
                 R.id.profile -> {
-                    replaceFragment(ProfileFragment())
+                    replaceFragment(ProfileFragment((activity as MainActivity).viewModelFactory))
                     title(getString(R.string.profile))
                 }
             }

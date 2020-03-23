@@ -12,7 +12,15 @@ import com.example.agoraandroidgsoc20.R
 import com.example.agoraandroidgsoc20.databinding.HomeFragmentBinding
 import javax.inject.Inject
 
-class HomeFragment : Fragment() {
+class HomeFragment
+    @Inject
+    constructor(
+        private val viewModelFactory: ViewModelProvider.Factory
+    ): Fragment() {
+
+    val viewModel: HomeViewModel by viewModels {
+        viewModelFactory
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

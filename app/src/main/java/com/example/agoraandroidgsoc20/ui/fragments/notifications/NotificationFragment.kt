@@ -12,9 +12,15 @@ import com.example.agoraandroidgsoc20.R
 import com.example.agoraandroidgsoc20.databinding.NotificationFragmentBinding
 import javax.inject.Inject
 
-class NotificationFragment : Fragment() {
+class NotificationFragment
+    @Inject
+    constructor(
+        private val viewModelFactory: ViewModelProvider.Factory
+    ): Fragment() {
 
-
+    val viewModel: NotificationViewModel by viewModels {
+        viewModelFactory
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

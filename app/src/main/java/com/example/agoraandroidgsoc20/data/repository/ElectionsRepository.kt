@@ -1,4 +1,4 @@
-package com.example.agoraandroidgsoc20.data.model.repository
+package com.example.agoraandroidgsoc20.data.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

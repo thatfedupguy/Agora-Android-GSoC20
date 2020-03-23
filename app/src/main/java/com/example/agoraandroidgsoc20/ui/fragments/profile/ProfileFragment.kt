@@ -12,7 +12,15 @@ import com.example.agoraandroidgsoc20.R
 import com.example.agoraandroidgsoc20.databinding.ProfileFragmentBinding
 import javax.inject.Inject
 
-class ProfileFragment: Fragment() {
+class ProfileFragment
+    @Inject
+    constructor(
+        private val viewModelFactory: ViewModelProvider.Factory
+    ): Fragment() {
+
+    val viewModel: ProfileViewModel by viewModels {
+        viewModelFactory
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

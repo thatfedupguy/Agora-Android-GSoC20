@@ -1,6 +1,6 @@
 package com.example.agoraandroidgsoc20.di.module
 
-import com.example.agoraandroidgsoc20.data.model.repository.ElectionsRepository
+import com.example.agoraandroidgsoc20.data.repository.ElectionsRepository
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
