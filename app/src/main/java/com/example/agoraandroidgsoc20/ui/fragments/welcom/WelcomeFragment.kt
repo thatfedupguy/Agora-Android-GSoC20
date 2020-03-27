@@ -4,11 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.agoraandroidgsoc20.R
+import com.example.agoraandroidgsoc20.data.db.PreferenceProvider
+import com.example.agoraandroidgsoc20.utils.hideActionBar
+import com.example.agoraandroidgsoc20.utils.statusBarColor
 import kotlinx.android.synthetic.main.welcome_fragment.view.*
 
 
@@ -27,8 +28,10 @@ class WelcomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         rootView = inflater.inflate(R.layout.welcome_fragment, container, false)
-        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
-        requireActivity().window.statusBarColor = ContextCompat.getColor(requireContext(), R.color.white)
+        hideActionBar()
+        statusBarColor( R.color.white)
+
+
 
         rootView.btn_login.setOnClickListener {
             Navigation.findNavController(rootView).
@@ -39,6 +42,7 @@ class WelcomeFragment : Fragment() {
             Navigation.findNavController(rootView).
                 navigate(WelcomeFragmentDirections.actionWelcomeFragmentToSignupFragment())
         }
+
         return rootView
     }
 }

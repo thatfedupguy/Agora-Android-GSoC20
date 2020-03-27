@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -14,30 +15,47 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.example.agoraandroidgsoc20.R
 import com.example.agoraandroidgsoc20.databinding.MainTabFragmentBinding
+import com.example.agoraandroidgsoc20.listeners.OnBackPressed
 import com.example.agoraandroidgsoc20.ui.activities.MainActivity
 import com.example.agoraandroidgsoc20.ui.fragments.elections.ElectionsFragment
 import com.example.agoraandroidgsoc20.ui.fragments.home.HomeFragment
 import com.example.agoraandroidgsoc20.ui.fragments.notifications.NotificationFragment
 import com.example.agoraandroidgsoc20.ui.fragments.profile.ProfileFragment
+import com.example.agoraandroidgsoc20.utils.hideActionBar
+import com.example.agoraandroidgsoc20.utils.showActionBar
+import com.example.agoraandroidgsoc20.utils.statusBarColor
+import com.example.agoraandroidgsoc20.utils.titleForActionBar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import javax.inject.Inject
 
 
-class MainTabFragment : Fragment() {
+class MainTabFragment
+    @Inject
+    constructor(
+        private val viewModelFactory: ViewModelProvider.Factory
+    ): Fragment() {
 
     private lateinit var rootView: View
+
+    val viewModel: MainTabViewModel by viewModels {
+        viewModelFactory
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        titleForActionBar(getString(R.string.home))
+        showActionBar()
+        statusBarColor(R.color.colorPrimary)
+
         rootView =  inflater.inflate(R.layout.main_tab_fragment, container, false)
         val binding = DataBindingUtil.bind<MainTabFragmentBinding>(rootView)!!
         binding.bottomNavigation.setOnNavigationItemSelectedListener(
             onBottomNavigationItemSelectedListener
         )
         if (childFragmentManager.findFragmentById(R.id.container) == null) {
-            replaceFragment(HomeFragment((activity as MainActivity).viewModelFactory))
+            replaceFragment(HomeFragment(viewModelFactory))
             title(getString(R.string.home))
         }
         return rootView
@@ -47,19 +65,19 @@ class MainTabFragment : Fragment() {
         BottomNavigationView.OnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.home -> {
-                    replaceFragment(HomeFragment((activity as MainActivity).viewModelFactory))
+                    replaceFragment(HomeFragment(viewModelFactory))
                     title(getString(R.string.agora))
                 }
                 R.id.elections -> {
-                    replaceFragment(ElectionsFragment((activity as MainActivity).viewModelFactory))
+                    replaceFragment(ElectionsFragment(viewModelFactory))
                     title(getString(R.string.elections))
                 }
                 R.id.notifications -> {
-                    replaceFragment(NotificationFragment((activity as MainActivity).viewModelFactory))
+                    replaceFragment(NotificationFragment(viewModelFactory))
                     title(getString(R.string.notifications))
                 }
                 R.id.profile -> {
-                    replaceFragment(ProfileFragment((activity as MainActivity).viewModelFactory))
+                    replaceFragment(ProfileFragment(viewModelFactory))
                     title(getString(R.string.profile))
                 }
             }
@@ -78,7 +96,11 @@ class MainTabFragment : Fragment() {
     }
 
     private fun title(name: String){
-        (activity as AppCompatActivity).supportActionBar?.title = name
+        (requireActivity() as AppCompatActivity).supportActionBar?.title = name
     }
+
+
+
+
 
 }

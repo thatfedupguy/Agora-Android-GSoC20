@@ -8,8 +8,11 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.example.agoraandroidgsoc20.R
 import com.example.agoraandroidgsoc20.databinding.ProfileFragmentBinding
+import kotlinx.android.synthetic.main.profile_fragment.*
+import kotlinx.android.synthetic.main.profile_fragment.view.*
 import javax.inject.Inject
 
 class ProfileFragment
@@ -22,16 +25,21 @@ class ProfileFragment
         viewModelFactory
     }
 
+    lateinit var rootView: View
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.profile_fragment, container, false)
+        rootView =  inflater.inflate(R.layout.profile_fragment, container, false)
+
+        rootView.btn_logout.setOnClickListener {
+            viewModel.deleteUser()
+            Navigation.findNavController(rootView).navigate(R.id.welcomeFragment)
+        }
+
+        return rootView
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val binding = DataBindingUtil.bind<ProfileFragmentBinding>(view)!!
-    }
 
 }

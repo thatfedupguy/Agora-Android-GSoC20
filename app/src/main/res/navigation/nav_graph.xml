@@ -8,7 +8,11 @@
     <fragment
         android:id="@+id/mainTabFragment"
         android:name="com.example.agoraandroidgsoc20.ui.fragments.main.MainTabFragment"
-        android:label="MainTabFragment" />
+        android:label="MainTabFragment" >
+        <action
+            android:id="@+id/action_mainTabFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.example.agoraandroidgsoc20.ui.fragments.welcom.WelcomeFragment"
@@ -19,6 +23,9 @@
         <action
             android:id="@+id/action_welcomeFragment_to_signupFragment"
             app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_mainTabFragment"
+            app:destination="@id/mainTabFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"

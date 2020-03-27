@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.agoraandroidgsoc20.R
 import com.example.agoraandroidgsoc20.data.model.Election
 import com.example.agoraandroidgsoc20.utils.Coroutines
-import com.example.agoraandroidgsoc20.utils.ViewModelFactory
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.elections_fragment.*

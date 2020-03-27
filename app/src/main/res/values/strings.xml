@@ -42,4 +42,6 @@
     <string name="manage_elections">Manage Elections</string>
     <string name="delete_account">Delete Account</string>
     <string name="log_out">Log out</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="create_election">Create Election</string>
 </resources>

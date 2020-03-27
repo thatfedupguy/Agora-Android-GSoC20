@@ -1,4 +1,4 @@
-package com.example.agoraandroidgsoc20.utils
+package com.example.agoraandroidgsoc20.di.util
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

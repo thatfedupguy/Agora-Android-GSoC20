@@ -2,261 +2,302 @@
 
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     >
-    <RelativeLayout android:layout_width="match_parent"
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.fragments.home.HomeFragment">
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/size_24sp"
-                android:text="@string/dashboard"
-                android:padding="@dimen/size_8dp"
-                android:textColor="@color/black" />
+            android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/linear_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <androidx.cardview.widget.CardView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="@dimen/size_5dp"
-                    android:elevation="@dimen/size_5dp"
-                    android:layout_margin="@dimen/size_8dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:padding="@dimen/size_12dp"
-                        >
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                        <ImageView
-                            android:background="@color/home_card_background"
-                            android:id="@+id/iv_product"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_total_elections"
-                            />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/size_8dp"
+                    android:text="@string/dashboard"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_8dp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/size_5dp"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="@dimen/size_5dp">
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="horizontal">
-                            <LinearLayout
-                                android:layout_width="0dp"
+                            android:orientation="vertical"
+                            android:padding="@dimen/size_12dp">
+
+                            <ImageView
+                                android:id="@+id/iv_product"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="4"
-                                android:orientation="vertical"
-                                android:layout_gravity="center">
-                                <TextView
-                                    android:layout_width="wrap_content"
+                                android:background="@color/home_card_background"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_total_elections" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/total_elections"
-                                    android:textColor="@color/black"
-                                    android:paddingTop="@dimen/size_4dp"
-                                    android:paddingBottom="@dimen/size_4dp" />
-                                <TextView
-                                    android:id="@+id/tv_total_elections"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="0"
-                                    android:textColor="@color/black"
-                                    android:textStyle="bold"
-                                    android:textSize="@dimen/size18sp"/>
+                                    android:layout_gravity="center"
+                                    android:layout_weight="4"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingTop="@dimen/size_4dp"
+                                        android:paddingBottom="@dimen/size_4dp"
+                                        android:text="@string/total_elections"
+                                        android:textColor="@color/black" />
+
+                                    <TextView
+                                        android:id="@+id/tv_total_elections"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/size18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
                             </LinearLayout>
-
                         </LinearLayout>
-                    </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="@dimen/size_5dp"
-                    android:elevation="@dimen/size_5dp"
-                    android:layout_margin="@dimen/size_8dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_8dp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/size_5dp"
                         android:orientation="vertical"
-                        android:padding="@dimen/size_12dp"
-                        >
+                        app:cardCornerRadius="@dimen/size_5dp">
 
-                        <ImageView
-                            android:background="@color/home_card_background"
-                            android:id="@+id/iv_active_elections"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_active_elections"
-                            />
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="horizontal">
-                            <LinearLayout
-                                android:layout_width="0dp"
+                            android:orientation="vertical"
+                            android:padding="@dimen/size_12dp">
+
+                            <ImageView
+                                android:id="@+id/iv_active_elections"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="4"
-                                android:orientation="vertical"
-                                android:layout_gravity="center">
-                                <TextView
-                                    android:layout_width="wrap_content"
+                                android:background="@color/home_card_background"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_active_elections" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/active_elections"
-                                    android:textColor="@color/black"
-                                    android:paddingTop="@dimen/size_4dp"
-                                    android:paddingBottom="@dimen/size_4dp"/>
-                                <TextView
-                                    android:id="@+id/tv_active_elections"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/_0"
-                                    android:textColor="@color/black"
-                                    android:textStyle="bold"
-                                    android:textSize="@dimen/size18sp"/>
+                                    android:layout_gravity="center"
+                                    android:layout_weight="4"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingTop="@dimen/size_4dp"
+                                        android:paddingBottom="@dimen/size_4dp"
+                                        android:text="@string/active_elections"
+                                        android:textColor="@color/black" />
+
+                                    <TextView
+                                        android:id="@+id/tv_active_elections"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/_0"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/size18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
                             </LinearLayout>
-
                         </LinearLayout>
-                    </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_8dp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/size_5dp"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="@dimen/size_5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/size_12dp">
+
+                            <ImageView
+                                android:id="@+id/iv_pending_elections"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/home_card_background"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_pending_elections" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="4"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingTop="@dimen/size_4dp"
+                                        android:paddingBottom="@dimen/size_4dp"
+                                        android:text="@string/pending_elections"
+                                        android:textColor="@color/black" />
+
+                                    <TextView
+                                        android:id="@+id/tv_pending_elections"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/_0"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/size18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_8dp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/size_5dp"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="@dimen/size_5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/size_12dp">
+
+                            <ImageView
+                                android:id="@+id/iv_finished_elections"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_finished_elections" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="4"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingTop="@dimen/size_4dp"
+                                        android:paddingBottom="@dimen/size_4dp"
+                                        android:text="@string/finished_elections"
+                                        android:textColor="@color/black" />
+
+                                    <TextView
+                                        android:id="@+id/tv_finished_elections"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/_0"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/size18sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
 
             </LinearLayout>
-            <LinearLayout
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_create_election"
+                style="@style/ButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <androidx.cardview.widget.CardView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="@dimen/size_5dp"
-                    android:elevation="@dimen/size_5dp"
-                    android:layout_margin="@dimen/size_8dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:padding="@dimen/size_12dp"
-                        >
-
-                        <ImageView
-                            android:background="@color/home_card_background"
-                            android:id="@+id/iv_pending_elections"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_pending_elections"
-                            />
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="4"
-                                android:orientation="vertical"
-                                android:layout_gravity="center">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/pending_elections"
-                                    android:textColor="@color/black"
-                                    android:paddingTop="@dimen/size_4dp"
-                                    android:paddingBottom="@dimen/size_4dp" />
-                                <TextView
-                                    android:id="@+id/tv_pending_elections"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/_0"
-                                    android:textColor="@color/black"
-                                    android:textStyle="bold"
-                                    android:textSize="@dimen/size18sp"/>
-                            </LinearLayout>
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="@dimen/size_5dp"
-                    android:elevation="@dimen/size_5dp"
-                    android:layout_margin="@dimen/size_8dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:padding="@dimen/size_12dp"
-                        >
-
-                        <ImageView
-                            android:id="@+id/iv_finished_elections"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_finished_elections"
-                            />
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="4"
-                                android:orientation="vertical"
-                                android:layout_gravity="center">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/finished_elections"
-                                    android:textColor="@color/black"
-                                    android:paddingTop="@dimen/size_4dp"
-                                    android:paddingBottom="@dimen/size_4dp" />
-                                <TextView
-                                    android:id="@+id/tv_finished_elections"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/_0"
-                                    android:textColor="@color/black"
-                                    android:textStyle="bold"
-                                    android:textSize="@dimen/size18sp"/>
-                            </LinearLayout>
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-            </LinearLayout>
-
-        </LinearLayout>
+                android:layout_below="@+id/linear_layout"
+                android:layout_marginStart="@dimen/size_30dp"
+                android:layout_marginEnd="@dimen/size_30dp"
+                android:layout_alignParentBottom="true"
+                android:text="@string/create_election"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout" />
 
 
 
-    </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
 
 </layout>
