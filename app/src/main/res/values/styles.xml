@@ -43,6 +43,7 @@
         <item name="android:textSize">@dimen/size_14sp</item>
         <item name="android:height">@dimen/size_48dp</item>
     </style>
+
     <style name="WhiteButtonStyle" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/white_button_style</item>
         <item name="android:textSize">@dimen/size_14sp</item>
@@ -52,9 +53,16 @@
         <item name="android:paddingEnd">@dimen/size_10dp</item>
         <item name="android:textAlignment">textStart</item>
     </style>
+
     <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="boxStrokeColor">@color/mtrl_textinput_default_box_stroke_color</item>
         <item name="boxStrokeWidth">@dimen/size_2dp</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@android:color/darker_gray</item>
     </style>
 
 

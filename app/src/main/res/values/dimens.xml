@@ -34,4 +34,11 @@
     <dimen name="size_30dp">30dp</dimen>
     <dimen name="size_52dp">52dp</dimen>
     <dimen name="size_40dp">40dp</dimen>
+    <dimen name="size_110dp">110dp</dimen>
+    <dimen name="size_24dpx">24dp</dimen>
+    <dimen name="size_24dp">24dp</dimen>
+    <dimen name="size_64dp">64dp</dimen>
+    <dimen name="size_130dp">130dp</dimen>
+    <dimen name="size_15dp">15dp</dimen>
+    <dimen name="size_1dp">1dp</dimen>
 </resources>

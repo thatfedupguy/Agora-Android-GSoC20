@@ -32,7 +32,10 @@ class UserRepository
     }
     fun  getUser() = db.getUserDao().getUser()
 
-    suspend fun deleteUser() = db.getUserDao().nukeUser()
+    suspend fun deleteUser() {
+        db.getUserDao().nukeUser()
+        prefs.setIsloggedIn(false)
+    }
 
 
 }

@@ -54,6 +54,8 @@ class MainActivity : AppCompatActivity() {
             if (currentFragment is MainTabFragment) {
                 moveTaskToBack(true)
                 return
+            }else{
+                super.onBackPressed()
             }
         }else{
             super.onBackPressed()

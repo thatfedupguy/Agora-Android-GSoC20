@@ -2,6 +2,7 @@ package com.example.agoraandroidgsoc20.ui.fragments.profile
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
+import com.example.agoraandroidgsoc20.data.db.PreferenceProvider
 import com.example.agoraandroidgsoc20.data.repository.UserRepository
 import com.example.agoraandroidgsoc20.utils.Coroutines
 import javax.inject.Inject
@@ -12,6 +13,7 @@ class ProfileViewModel
     @Inject
     constructor(
         private val userRepository: UserRepository
+
     )
     : ViewModel() {
 

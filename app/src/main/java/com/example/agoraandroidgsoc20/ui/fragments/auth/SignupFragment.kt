@@ -32,7 +32,7 @@ class SignupFragment : Fragment() {
         titleForActionBar(getString(R.string.signup))
         showActionBar()
         statusBarColor(R.color.colorPrimary)
-
+        rootView=  inflater.inflate(R.layout.fragment_signup, container, false)
         rootView.btn_signup.setOnClickListener {
             Navigation.findNavController(rootView).navigate(SignupFragmentDirections.actionSignupFragmentToLoginFragment())
         }

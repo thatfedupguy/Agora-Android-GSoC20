@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=" .ui.fragments.createElection.UploadCandidateFragment"
+
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_upload_candidate_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_candidates"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:paddingStart="@dimen/size_10dp"
+                android:gravity="start"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+
+                />
+            <TextView
+                android:id="@+id/tv_page_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/_2_3"
+                android:layout_toEndOf="@+id/tv_enter_details_label"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_candidate_name"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_24dp"
+                android:hint="@string/enter_candidate_name"
+                android:layout_marginEnd="@dimen/size_10dp"
+                android:layout_alignParentStart="true"
+                app:boxStrokeColor="@color/colorPrimary"
+                android:layout_toStartOf="@+id/iv_start_date"
+                android:layout_below="@id/tv_upload_candidate_label"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/iv_start_date"
+                style="@style/ButtonStyle"
+                android:layout_width="@dimen/size_130dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tv_upload_candidate_label"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/size_24dp"
+                android:contentDescription="@string/information"
+                android:text="@string/add" />
+
+            <View
+                android:id="@+id/divider"
+                style="@style/Divider"
+                android:layout_below="@+id/til_candidate_name"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:id="@+id/tv_candidate_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/candidates"
+                android:paddingStart="@dimen/size_10dp"
+                android:gravity="start"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:layout_below="@id/divider"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_candidates"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tv_candidate_label"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                tools:listitem="@layout/list_item_candidate"
+                android:background="@drawable/green_border_background"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_proceed"
+                style="@style/ButtonStyle"
+                android:layout_marginTop="@dimen/size_24dp"
+                android:text="@string/proceed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/rv_candidates"/>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

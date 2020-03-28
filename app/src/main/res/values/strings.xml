@@ -44,4 +44,20 @@
     <string name="log_out">Log out</string>
     <string name="something_went_wrong">Something went wrong</string>
     <string name="create_election">Create Election</string>
+    <string name="proceed">Proceed</string>
+    <string name="end_date">End Date</string>
+    <string name="enter_name_of_election">Enter Name Of Election</string>
+    <string name="election_description">Election Description</string>
+    <string name="start_date">Start Date</string>
+    <string name="election_details">Election Details</string>
+    <string name="date_picker">Date Picker</string>
+    <string name="_1_3">1/3</string>
+    <string name="information">Information</string>
+    <string name="upload_candidates">Upload Candidates</string>
+    <string name="_2_3">2/3</string>
+    <string name="add">Add</string>
+    <string name="enter_candidate_name">Enter Candidate Name</string>
+    <string name="candidates">Candidates</string>
+    <string name="candidate_name">Candidate Name</string>
+    <string name="bin">bin</string>
 </resources>

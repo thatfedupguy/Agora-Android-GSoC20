@@ -6,9 +6,10 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/grey_background"
         tools:context=".ui.fragments.profile.ProfileFragment">
         <RelativeLayout
-            android:background="@color/grey_background"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
