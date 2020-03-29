@@ -6,26 +6,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.example.agoraandroidgsoc20.R
 import com.example.agoraandroidgsoc20.databinding.MainTabFragmentBinding
-import com.example.agoraandroidgsoc20.listeners.OnBackPressed
-import com.example.agoraandroidgsoc20.ui.activities.MainActivity
 import com.example.agoraandroidgsoc20.ui.fragments.elections.ElectionsFragment
 import com.example.agoraandroidgsoc20.ui.fragments.home.HomeFragment
 import com.example.agoraandroidgsoc20.ui.fragments.notifications.NotificationFragment
 import com.example.agoraandroidgsoc20.ui.fragments.profile.ProfileFragment
-import com.example.agoraandroidgsoc20.utils.hideActionBar
 import com.example.agoraandroidgsoc20.utils.showActionBar
 import com.example.agoraandroidgsoc20.utils.statusBarColor
 import com.example.agoraandroidgsoc20.utils.titleForActionBar
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.home_fragment.*
+import kotlinx.android.synthetic.main.home_fragment.view.*
 import javax.inject.Inject
 
 
@@ -55,7 +54,7 @@ class MainTabFragment
             onBottomNavigationItemSelectedListener
         )
         if (childFragmentManager.findFragmentById(R.id.container) == null) {
-            replaceFragment(HomeFragment(viewModelFactory))
+            replaceFragment(HomeFragment())
             title(getString(R.string.home))
         }
         return rootView
@@ -65,7 +64,7 @@ class MainTabFragment
         BottomNavigationView.OnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.home -> {
-                    replaceFragment(HomeFragment(viewModelFactory))
+                    replaceFragment(HomeFragment())
                     title(getString(R.string.agora))
                 }
                 R.id.elections -> {

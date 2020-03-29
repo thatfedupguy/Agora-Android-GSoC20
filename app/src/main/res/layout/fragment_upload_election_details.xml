@@ -154,7 +154,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:id="@+id/submit_details_btn"
+                android:id="@+id/btn_proceed"
                 style="@style/ButtonStyle"
                 android:layout_marginTop="@dimen/size_64dp"
                 android:text="@string/proceed"

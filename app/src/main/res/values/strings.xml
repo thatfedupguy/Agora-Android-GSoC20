@@ -60,4 +60,15 @@
     <string name="candidates">Candidates</string>
     <string name="candidate_name">Candidate Name</string>
     <string name="bin">bin</string>
+    <string name="get_real_time_results">Get Real Time Results</string>
+    <string name="invite_voters">Invite Voters</string>
+    <string name="only_me">Only me</string>
+    <string name="everyone_with_access_to_election">Everyone with access to election</string>
+    <string name="ballots_are_completely_secret">Ballots are completely secret</string>
+    <string name="ballots_visible_only_to_me">Ballots visible only to me</string>
+    <string name="ballots_visible_to_everyone">Ballots visible to everyone</string>
+    <string name="who_can_see_the_list_of_voters">Who can see the list of voters</string>
+    <string name="how_secret_are_ballots">How secret are ballots</string>
+    <string name="some_more_options">Some more options</string>
+    <string name="_3_3">3/3</string>
 </resources>

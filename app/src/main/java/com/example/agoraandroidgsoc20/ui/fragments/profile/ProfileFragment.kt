@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.example.agoraandroidgsoc20.R
 import com.example.agoraandroidgsoc20.databinding.ProfileFragmentBinding
 import kotlinx.android.synthetic.main.profile_fragment.*
@@ -35,7 +36,7 @@ class ProfileFragment
 
         rootView.btn_logout.setOnClickListener {
             viewModel.deleteUser()
-            Navigation.findNavController(rootView).navigate(R.id.welcomeFragment)
+            parentFragment?.findNavController()?.navigate(R.id.welcomeFragment)
         }
 
         return rootView

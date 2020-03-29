@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_mainTabFragment_to_welcomeFragment"
             app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_mainTabFragment_to_uploadElectionDetailsFragment"
+            app:destination="@id/uploadElectionDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
@@ -44,5 +47,37 @@
         <action
             android:id="@+id/action_signupFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadElectionDetailsFragment"
+        android:name="com.example.agoraandroidgsoc20.ui.fragments.createElection.UploadElectionDetailsFragment"
+        android:label="UploadElectionDetailsFragment" >
+        <action
+            android:id="@+id/action_uploadElectionDetailsFragment_to_uploadCandidateFragment"
+            app:destination="@id/uploadCandidateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadCandidateFragment"
+        android:name="com.example.agoraandroidgsoc20.ui.fragments.createElection.UploadCandidateFragment"
+        android:label="UploadCandidateFragment" >
+        <action
+            android:id="@+id/action_uploadCandidateFragment_to_uploadElection"
+            app:destination="@id/uploadElection" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadElection"
+        android:name="com.example.agoraandroidgsoc20.ui.fragments.createElection.UploadElection"
+        android:label="UploadElection" >
+        <action
+            android:id="@+id/action_uploadElection_to_mainTabFragment"
+            app:destination="@id/mainTabFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.agoraandroidgsoc20.ui.fragments.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_uploadElectionDetailsFragment"
+            app:destination="@id/uploadElectionDetailsFragment" />
     </fragment>
 </navigation>

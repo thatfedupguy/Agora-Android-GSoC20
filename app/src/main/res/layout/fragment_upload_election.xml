@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.fragments.createElection.UploadElection"
+    tools:context=".createelection.CreateElectionFour"
     >
 
     <ScrollView
@@ -11,157 +11,177 @@
         android:padding="16dp"
         >
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            >
 
             <TextView
-                android:id="@+id/tv_enter_details_label"
+                android:id="@+id/tv_upload_candidate_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/election_details"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:paddingStart="@dimen/size_10dp"
                 android:gravity="start"
+                android:paddingStart="@dimen/size_10dp"
+                android:text="@string/upload_candidates"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
 
-                />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:id="@+id/tv_page_number"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="end"
-                android:text="@string/_1_3"
-                android:layout_toEndOf="@+id/tv_enter_details_label"
+                android:text="@string/_3_3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/tv_upload_candidate_label"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_election_name"
-                style="@style/TextInputLayoutStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:hint="@string/enter_name_of_election"
-                app:boxStrokeColor="@color/colorPrimary"
-                android:layout_below="@+id/tv_enter_details_label"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_election_description"
-                style="@style/TextInputLayoutStyle"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/size_110dp"
-                android:layout_marginTop="24dp"
-                android:clickable="false"
-                android:hint="@string/election_description"
-                app:boxStrokeColor="@color/colorPrimary"
-                android:layout_below="@+id/til_election_name"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textMultiLine"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:background="@drawable/ic_drop_down"
-                android:id="@+id/spinner_algorithm"
-                android:layout_below="@id/til_election_description">
-            </Spinner>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/til_election_description"
-                android:layout_toEndOf="@+id/spinner_algorithm"
-                android:contentDescription="@string/information"
-                android:foregroundGravity="center"
-                android:src="@drawable/ic_info" />
-
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_start_date"
-                style="@style/TextInputLayoutStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/size_24dp"
-                android:hint="@string/start_date"
-                app:boxStrokeColor="@color/colorPrimary"
-                android:layout_toStartOf="@+id/iv_start_date"
-                android:layout_below="@id/spinner_algorithm"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:enabled="false"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <ImageView
-                android:id="@+id/iv_start_date"
-                android:layout_marginTop="24dp"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_below="@id/spinner_algorithm"
-                android:layout_alignParentEnd="true"
-                android:contentDescription="@string/information"
-                android:src="@drawable/ic_calender_icon" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_end_date"
-                style="@style/TextInputLayoutStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/size_24dp"
-                android:hint="@string/end_date"
-                app:boxStrokeColor="@color/colorPrimary"
-                android:layout_toStartOf="@+id/iv_start_date"
-                android:layout_below="@id/til_start_date"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:enabled="false"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <ImageView
-                android:id="@+id/iv_end_date"
-                android:layout_marginTop="24dp"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_below="@id/til_start_date"
-                android:layout_alignParentEnd="true"
-                android:contentDescription="@string/information"
-                android:src="@drawable/ic_calender_icon" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
+            <Button
                 android:id="@+id/submit_details_btn"
                 style="@style/ButtonStyle"
-                android:layout_marginTop="@dimen/size_64dp"
-                android:text="@string/proceed"
-                android:layout_below="@+id/til_end_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/create_election"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
                 />
 
-        </RelativeLayout>
+            <CheckBox
+                android:id="@+id/real_time_results_check"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/get_real_time_results"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/secret_ballots_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/invite_voters_check"
+                />
+
+            <CheckBox
+                android:id="@+id/invite_voters_check"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_8dp"
+                android:text="@string/invite_voters"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/real_time_results_check"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/some_more_options_label_tv"
+                />
+
+            <RadioGroup
+                android:id="@+id/radioGroup2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/list_of_voters_tv"
+                >
+
+                <RadioButton
+                    android:id="@+id/access_only_me_radio_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/only_me"
+                    android:textSize="18sp"
+                    />
+
+                <RadioButton
+                    android:id="@+id/access_everyone_radio_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/everyone_with_access_to_election"
+                    android:textSize="18sp"
+                    />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secret_ballots_tv"
+                >
+
+                <RadioButton
+                    android:id="@+id/ballot_visibility_secret_radio_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/ballots_are_completely_secret"
+                    android:textSize="18sp"
+                    />
+
+                <RadioButton
+                    android:id="@+id/ballot_visibility_only_me_radio_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ballots_visible_only_to_me"
+                    android:textSize="18sp"
+                    />
+
+                <RadioButton
+                    android:id="@+id/ballot_visibility_everyone_radio_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ballots_visible_to_everyone"
+                    android:textSize="18sp"
+                    />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/list_of_voters_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="start"
+                android:text="@string/who_can_see_the_list_of_voters"
+                android:textSize="@dimen/size18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+                />
+
+            <TextView
+                android:id="@+id/secret_ballots_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="start"
+                android:text="@string/how_secret_are_ballots"
+                android:textSize="@dimen/size18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/real_time_results_check"
+                />
+
+            <TextView
+                android:id="@+id/some_more_options_label_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_8dp"
+                android:gravity="start"
+                android:text="@string/some_more_options"
+                android:textSize="@dimen/size18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_upload_candidate_label"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
 </layout>
