@@ -7,9 +7,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 import com.example.agoraandroidgsoc20.R
+import com.example.agoraandroidgsoc20.data.model.Election
+import com.example.agoraandroidgsoc20.ui.fragments.elections.ElectionItem
+import com.example.agoraandroidgsoc20.utils.Coroutines
 import com.example.agoraandroidgsoc20.utils.titleForActionBar
+import com.xwray.groupie.GroupAdapter
+import com.xwray.groupie.ViewHolder
+import kotlinx.android.synthetic.main.elections_fragment.*
 import kotlinx.android.synthetic.main.fragment_upload_candidate.view.*
 
 /**

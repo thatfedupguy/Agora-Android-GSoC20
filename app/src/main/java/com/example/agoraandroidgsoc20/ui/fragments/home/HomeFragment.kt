@@ -17,15 +17,9 @@ import kotlinx.android.synthetic.main.home_fragment.view.*
 import javax.inject.Inject
 
 class HomeFragment
-//    @Inject
-//    constructor(
-//        private val viewModelFactory: ViewModelProvider.Factory
-//    )
     : Fragment() {
 
-//    val viewModel: HomeViewModel by viewModels {
-//        viewModelFactory
-//    }
+
 
     lateinit var rootView: View
 

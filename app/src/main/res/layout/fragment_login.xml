@@ -38,6 +38,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/iv_login">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:text="@string/tushar_28"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -55,8 +56,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/til_username">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:text="@string/tushar_289"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.appcompat.widget.AppCompatButton
@@ -71,6 +74,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/til_password"
                 style="@style/ButtonStyle"
                 android:textColor="@color/white"
+                android:fontFamily="@font/montserrat"/>
+
+            <TextView
+                android:id="@+id/btn_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:text="@string/skip"
+                android:textSize="@dimen/size18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_login"
                 android:fontFamily="@font/montserrat"/>
 
             <ProgressBar

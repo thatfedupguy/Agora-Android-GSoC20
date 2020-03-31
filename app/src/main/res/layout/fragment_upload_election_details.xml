@@ -83,6 +83,7 @@
             </Spinner>
 
             <ImageView
+                android:id="@+id/iv_info"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@id/til_election_description"
@@ -106,15 +107,15 @@
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_start_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:enabled="false"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
             <ImageView
                 android:id="@+id/iv_start_date"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="33dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_below="@id/spinner_algorithm"
@@ -143,7 +144,7 @@
 
             <ImageView
                 android:id="@+id/iv_end_date"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="33dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_below="@id/til_start_date"

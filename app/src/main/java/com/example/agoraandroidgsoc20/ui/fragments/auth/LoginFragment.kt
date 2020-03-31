@@ -50,6 +50,10 @@ class LoginFragment
         showActionBar()
         statusBarColor(R.color.colorPrimary)
 
+        rootView.btn_skip.setOnClickListener {
+            Navigation.findNavController(rootView).navigate(LoginFragmentDirections.actionLoginFragmentToMainTabFragment())
+        }
+
         rootView.btn_login.setOnClickListener {
             viewModel.onLoginButtonClicked(til_username.editText?.text.toString(), til_password.editText?.text.toString())
         }

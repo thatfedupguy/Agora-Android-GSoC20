@@ -67,7 +67,7 @@
                 android:layout_height="match_parent"
                 android:layout_below="@id/tv_upload_candidate_label"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="@dimen/size_24dp"
+                android:layout_marginTop="33dp"
                 android:contentDescription="@string/information"
                 android:text="@string/add" />
 

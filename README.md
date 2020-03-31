@@ -4,11 +4,31 @@
 
 Project to show my coding practices and UI Designs.
 
-_Android Application for Agora Web that uses [Agora](https://gitlab.com/aossie/Agora/): An Electronic Voting Library implemented in Scala. This application uses [Agora Web API](https://gitlab.com/aossie/Agora-Web) as backend application_
+Overview of the repository:
 
-This project is created using [JavaSE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) on [Android Studio](https://developer.android.com/studio).
+##  UI implementation as shown in the Mockups:
+◘ I have used Relative and constraint layout so that the screens are perfect for screens of every size.
+◘ Navigation graph and NavHostFragment to change the fragments following single Activity Architecture.
+◘ MainTabFragment contains the bottomNavigation view which performs fragment transition between the Election, home, profile Fragment.
+◘ Styles for Button, TextInputLayout and splash screen.
+◘ Custom Selectors and drawables for Buttons.
+◘ LayerList for splash Screen.
+◘ Binding views of the recycler view item with the dummy data generated in the repository class.
+◘ Generic names for the resource values and views.
+◘ Using vector drawables for icons(no images).
 
-To run the development environment for this frontend, you need [Git](https://git-scm.com/) installed.
+
+## ◘ Code:
+◘ Complete code in kotlin following proper MVVM and Single Activity Architecture.
+◘ Configured all fragments with navigation architecture components.
+◘ Configured all modules with dagger dagger, Created AppModule, AppComponent, ViewModelModule, FragmentModule, ViewModelFactory, fragment factory.
+◘ Use of Kotlin coroutines to access data from the repository class in the background thread.
+◘ Use of extension function to change title of the action bar, color of status bar and access string resources with simple functions.
+◘ API integration for LOGIN API and Configuring room database to store user information.(To show project structure after implementation of room database and retrofit)
+◘ Use of live data to observe if the user is logged in or not.
+◘ Creation of custom exceptions to handle API and network call exceptions
+◘ Configured Groupie and implemented data binding in the election fragment. I have used groupie to reduce boilerplate code for the recycler view holder.
+
 
 
 ## Design
