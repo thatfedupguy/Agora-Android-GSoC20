@@ -4,6 +4,8 @@
 
 Project to show my coding practices and UI Designs.
 
+## [Video of working prototype](https://photos.app.goo.gl/o2fYLy1gJ4FkUw7K6)
+
 Overview of the repository:
 
 ##  UI implementation as shown in the Mockups:
@@ -26,7 +28,7 @@ Overview of the repository:
 ◘ Using vector drawables for icons(no images).
 
 
-## ◘ Code:
+##  Code:
 ◘ Complete code in kotlin following proper MVVM and Single Activity Architecture.
 
 ◘ Configured all fragments with navigation architecture components.
